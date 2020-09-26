@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="layout.css">
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+</head>
+<body>
+    <div class="page_container ">
+        <div class="text_container">
+            <h1>LED CONTROLLER</h1>
+            <div><p>SELECT COLOR : <input id="color_picker" type="color" value="#349eeb"/></p></div>
+        </div>
+        <div class="led_container">
+            <div class="led_row">
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+            </div>
+            <div class="led_row">
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+            </div>
+            <div class="led_row">
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+            </div>
+            <div class="led_row">
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+            </div>
+            <div class="led_row">
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+            </div>
+            <div class="led_row">
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+            </div>
+            <div class="led_row">
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+            </div>
+            <div class="led_row">
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+            </div>
+            <div class="led_row">
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+            </div>
+            <div class="led_row">
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+            </div>
+            <div class="led_row">
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+            </div>
+            <div class="led_row">
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+            </div>
+            <div class="led_row">
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+            </div>
+            <div class="led_row">
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+            </div>
+            <div class="led_row">
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+            </div>
+            <div class="led_row">
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+                <div class="led_slot"><div class="led_circle"><div class="fill"></div></div></div>
+            </div>
+        </div>
+        <div class="btn_container">
+            <p>
+                <input id="btnReset" type="button" value="RESET" style="float:left"/>
+            </p>
+            <p>
+                <input id="btnSubmit" type="button" value="SUBMIT" style="float:right"/>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
