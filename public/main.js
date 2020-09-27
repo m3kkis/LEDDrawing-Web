@@ -60,6 +60,8 @@ function init(socket){
             });
             matrix.push(row);
         });
-        console.log(matrix);
+
+        socket.emit('sendMatrix', matrix);
+
     }
 }

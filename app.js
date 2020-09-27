@@ -8,9 +8,22 @@ const port = 3000;
 app.use(express.static(__dirname + '/public'));
 
 io.on('connection', (socket) => {
-    console.log('a user connected');
+
+    console.log('Client connected');
+
+    socket.on('piconnected', function(data) { 
+        console.log("Device " + data.id + " has connected.");
+    });
+
+    
+    socket.on('sendMatrix', function(data) { 
+        console.log(data);
+        socket.broadcast.emit('setRGB',data);
+    });
+    
+
     socket.on('disconnect', () => {
-        console.log('user disconnected');
+        console.log('Client disconnected');
     });
 });
 
