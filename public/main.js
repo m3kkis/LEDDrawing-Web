@@ -12,7 +12,7 @@ function init(socket){
     var btnFill = document.querySelectorAll('.fill');
     var btnSubmit = document.getElementById('btnSubmit');
     var btnReset = document.getElementById('btnReset');
-
+    
     colorPicker.onchange = function(){
         hex = this.value;
     }

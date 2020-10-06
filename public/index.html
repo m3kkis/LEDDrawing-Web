@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>LED Controller</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="layout.css">
@@ -15,7 +15,19 @@
     <div class="page_container ">
         <div class="text_container">
             <h1>LED CONTROLLER</h1>
-            <div><p>SELECT COLOR : <input id="color_picker" type="color" value="#349eeb"/></p></div>
+            <p>Little project where you can draw something on the board below and it will appear on my LED frame at home.</p>
+            <div class="gif_container">
+                <img id="led_gif" src="./leddraw.gif"/>
+            </div>
+            <h4>HOW-TO</h4>
+            <ol>
+                <li>Select a color in the little box.</li>
+                <li>Click once on the little circle to add the color</li>
+                <li>Click a second time on the same circle to remove the color</li>
+                <li>Click <b>SUBMIT</b> to send the drawing to my LED Frame</li>
+                <li>Click <b>RESET</b> to clear all of the circles</li>
+            </ol>
+            <h4>SELECT COLOR : <input id="color_picker" type="color" value="#349eeb"/></h4>
         </div>
         <div class="led_container">
             <div class="led_row">
@@ -314,6 +326,13 @@
             <p>
                 <input id="btnSubmit" type="button" value="SUBMIT" style="float:right"/>
             </p>
+        </div>
+        <div>
+            <h4>SOURCE CODE (GitHub)</h4>
+            <ul>
+                <li><a href="https://github.com/m3kkis/LEDDrawing-Web">Code for the web page</a></li>
+                <li><a href="https://github.com/m3kkis/LEDDrawing-pi">Code for the Raspberry Pi</a></li>
+            </ul>
         </div>
     </div>
 </body>
