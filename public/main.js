@@ -63,5 +63,7 @@ function init(socket){
 
         socket.emit('sendMatrix', matrix);
 
+        alert("Drawing sent successfully. Thanks!")
+
     }
 }
